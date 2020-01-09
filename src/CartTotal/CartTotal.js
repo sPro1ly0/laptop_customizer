@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD'
-});
+import { CurrencyFormat } from '../CurrencyFormat';
 
 class CartTotal extends Component {
 
@@ -17,7 +13,7 @@ class CartTotal extends Component {
       <div className='summary__total'>
         <div className='summary__total__label'>Total</div>
         <div className='summary__total__value'>
-          {USCurrencyFormat.format(total)}
+          {CurrencyFormat.format(total)}
         </div>
       </div>
     );

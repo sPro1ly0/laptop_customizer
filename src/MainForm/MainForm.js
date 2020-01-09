@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import FormItem from '../FormItem/FormItem';
 
-
-
 class MainForm extends Component {
 
       render() {

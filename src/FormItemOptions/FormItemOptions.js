@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 import slugify from 'slugify';
-
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD'
-  });
+import { CurrencyFormat } from '../CurrencyFormat';
 
 class FormItemOptions extends Component{
     render() {
@@ -22,7 +18,7 @@ class FormItemOptions extends Component{
                     onChange={e => this.props.handleUpdate(feature, item)}
                     />
                     <label htmlFor={itemHash} className="feature__label">
-                    {item.name} ({USCurrencyFormat.format(item.cost)})
+                    {item.name} ({CurrencyFormat.format(item.cost)})
                     </label>
                 </div>
             );

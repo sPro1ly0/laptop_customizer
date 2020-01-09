@@ -1,9 +1,5 @@
-import React, {Component} from 'react';
-
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD'
-  });
+import React, { Component } from 'react';
+import { CurrencyFormat } from '../CurrencyFormat';
 
 class CartItem extends Component{
     render(){
@@ -15,7 +11,7 @@ class CartItem extends Component{
                 <div className="summary__option__label">{feature} </div>
                 <div className="summary__option__value">{selectedOption.name}</div>
                     <div className="summary__option__cost">
-                        {USCurrencyFormat.format(selectedOption.cost)}
+                        {CurrencyFormat.format(selectedOption.cost)}
                     </div>
                 </div>
             ); 
